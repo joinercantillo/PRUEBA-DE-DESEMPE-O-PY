@@ -1,14 +1,13 @@
 def add(studentlist):
     import csv
     import os
+    #this funtion add students
+    id = 0
     validation = int(input("Do you want to add any student? (yes=1/no=0): "))
     while validation == 1:
         try:
-            id = input("Student ID: ")
-            found_students = [c for c in studentlist if c['Student ID'].lower() == id.lower()]
-    
-            if found_students:
-                id =input("The studtent exits, please enter another ID: ")
+            id += 1
+            
             
             
             name = str(input("Name: "))
