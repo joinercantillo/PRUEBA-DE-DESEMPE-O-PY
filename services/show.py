@@ -4,6 +4,7 @@ def show(studentlist):
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     csv_path = os.path.join(base_dir, 'data', 'student.csv')
     try:
+        #this comand show all the students with a bucle for 
         with open(csv_path, "r", newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             listdat = list(reader)

@@ -2,6 +2,8 @@ def delc(studentlist):
     import csv
     import os
     print("\n=== DELETE A STUDENT ===")
+    #this comand search students by the id number
+
     id = input("Enter the student ID to delete: ")
     found = False
     for p in studentlist:
@@ -10,7 +12,7 @@ def delc(studentlist):
             print(f"student '{id}' has been deleted.")
             found = True
             break
-    
+    #if student not found in the he list show this message:
     if not found:
         print(f"Client '{id}' not found in Student list.")
     else:

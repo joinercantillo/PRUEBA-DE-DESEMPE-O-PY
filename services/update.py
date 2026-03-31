@@ -4,7 +4,7 @@ def updatec(studentlist):
     print("\n=== UPDATE STUDENT ===")
     id = input("Enter the student id to update: ")
     found = False
-    
+    #whit this comand search a using the id with new temporal variable for all items
     for student in studentlist:
         if student['Student ID'].lower() == id.lower():
             newid = input("Enter the new student ID (press Enter to keep current): ") 
