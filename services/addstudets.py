@@ -2,12 +2,15 @@ def add(studentlist):
     import csv
     import os
     #this funtion add students
-    id = 0
+    
     validation = int(input("Do you want to add any student? (yes=1/no=0): "))
     while validation == 1:
-        try:
-            id += 1
+        quantity = len(studentlist)
+        
             
+        id = quantity
+        id += 1
+        try:
             
             
             name = str(input("Name: "))
@@ -25,6 +28,7 @@ def add(studentlist):
                 print("Invalid input. Defaulting to 'inactive'.")
                 state = "inactive"
             
+            
             studentlist.append({'Student ID': id, 'Name': name, 'Age': age, 'Grade': grade, 'State': state})
             
             # Get the correct CSV file path
@@ -35,8 +39,11 @@ def add(studentlist):
                 writer = csv.DictWriter(f, fieldnames=["Student ID", "Name", "Age", "Grade", "State"])
                 writer.writeheader()
                 writer.writerows(studentlist)
+
             
             print(f"Student '{name}' added successfully.")
+            
+
             validation = int(input("Add another Student? (yes=1/no=0): "))
             if validation == 0:
                 print("Returning to main menu...")

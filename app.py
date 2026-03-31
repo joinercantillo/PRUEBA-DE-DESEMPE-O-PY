@@ -27,6 +27,7 @@ while option != 6:
         alls = list(reader)
     
     
+    
     option = int(input("Select an option (1-6): "))
     
     if option == 1:
